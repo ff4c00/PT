@@ -1,0 +1,4 @@
+<!-- 2017年11月01日19:29:20 --> 
+<h3>登录后current_user为空问题</h3>
+<p>登录过程中在session_controller#create里面current_user有值,登录后即跳出create方法为nil,原因之一在session_store.rb文件中做了限制,如:Rails.application.config.session_store :active_record_store, key: 'shen-hua',domain: '.sinopr.org' 可以改为:Rails.application.config.session_store :active_record_store, key: 'shen-hua'或者:Rails.application.config.session_store :active_record_store</p> 
+

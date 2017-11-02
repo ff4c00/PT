@@ -1,0 +1,9 @@
+<!-- 2017年11月01日19:48:15 --> 
+<h3>遍历项数组化</h3>
+<p>
+map最简单的用法是:Emall.all.map &:name<br>
+或者是:Emall.all.map{|e|e.name}<br>
+如果遍历项超过一个时,Emall.all.map{|e|e.id, e.name}是不行的,需要将遍历项数组化:<br>
+Emall.all.map{|e|[e.id,e.name]}
+</p> 
+

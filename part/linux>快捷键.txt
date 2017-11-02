@@ -1,0 +1,6 @@
+<!-- 2017年11月01日19:44:29 --> 
+<h3>ubuntu快捷键</h3>
+<p>
+Ctrl+Alt+L– 锁住屏幕。Ctrl+Super+Up 键：最大化当前窗口Ctrl+Super+Down键：最小化当前窗口Ctrl+Super+D：最小化所有窗口Ctrl+Super+Left：半最大化当前窗口（左边）Ctrl+Super+Right：半最大化当前窗口（右边）Alt+F10 – 在最大化/非最大化之间切换当前窗口。Alt+F4 – 关闭当前窗口。
+</p> 
+

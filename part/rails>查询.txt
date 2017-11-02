@@ -1,0 +1,16 @@
+<!-- 2017年11月01日19:35:50 --> 
+<h3>offset方法</h3>
+<p>offset 方法指定获取对象时的偏移量,如:<br>User.all.size #=>117<br>User.all.offset(100).size #=>17</p> 
+
+<!-- 2017年11月01日19:41:32 --> 
+<h3>符号占位符</h3>
+<p>
+Client.where("created_at >= :start_date AND created_at <= :end_date",{start_date: params[:start_date], end_date: params[:end_date]})
+</p> 
+
+<!-- 2017年11月01日19:53:36 --> 
+<h3>not条件</h3>
+<p>
+Client.where.not(locked: true)<br>先调用没有参数的 where 方法，然后马上链式调用 not 方法,上面的代码会生成下面的 SQL 语句:<br>SELECT * FROM clients WHERE (clients.locked != 1)
+</p> 
+

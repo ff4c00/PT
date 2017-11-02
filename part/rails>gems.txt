@@ -1,0 +1,9 @@
+<!-- 2017年11月02日10:09:19 --> 
+<h3>rails-settings-cached</h3>
+<p>
+<a href="https://github.com/huacnlee/rails-settings-cached">ails-settings-cached</a>用于设置缓存,配置流程参见链接,它是一种类似全局哈希存储在数据库中,value可以存储字符串,数组,哈希,数字等常见数据类型.添加哈希:Setting.key_name = value来添加设置<br>
+可以在config/initializers下新增一个文件来初始化默认配置如default_setting.rb<br>
+需要删除时使用Setting.destroy :key_name来删除.<br>
+Setting.get_alll来列出所有设置
+</p> 
+

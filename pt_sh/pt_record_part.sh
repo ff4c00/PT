@@ -14,14 +14,15 @@ contents=()
 # 记录内容
 for outline in ${outlines[@]}
 do
-  echo -e "那么${outline}的具体内容";read -e -d "$" content; contents=( "${contents[@]}" "$content" );
+  echo -e "那么${outline}的具体内容";read -e -d "~" content; contents=( "${contents[@]}" "$content" );
 done
 # 记录内容END
 
 # 写入文件
 for ((i=0;i<${#contents[@]};i++))
 {
- echo -e "${outlines[$i]}:${contents[$i]}," | tee -ai $pt_file_path;
+ echo -e "<!-- ${pt_date} --> \n<h3>${outlines[$i]}</h3>" | tee -ai $pt_file_path;
+ echo -e "<p>\n${contents[$i]}\n</p> \n" | tee -ai $pt_file_path;
 }
 # 写入文件END
 

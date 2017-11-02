@@ -1,0 +1,12 @@
+<!-- 2017年11月01日19:56:09 --> 
+<h3>camelize方法</h3>
+<p>
+camelize方法可以将字串转为驼峰式的字串,如:<br>pry(main)> emall_code = "staples";emall_code.camelize #=> "Staples"
+</p> 
+
+<!-- 2017年11月01日19:56:09 --> 
+<h3>constantize方法</h3>
+<p>
+调用 constantize 方法，将得到真正的类对象,如:<br>pry(main)> emall_code = "staples";emall_code.camelize.constantize #=> Staple<br>pry(main)> emall_code = "staples";emall_code.camelize.constantize.class #=> Module
+</p> 
+

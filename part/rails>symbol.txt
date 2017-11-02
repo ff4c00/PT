@@ -1,0 +1,16 @@
+<!-- 2017年11月02日15:02:23 -->
+<h3>方法中的星号("*")</h3>
+<p>
+在方法中时常会遇到类似:<br>
+def function_name(*arg)<br>
+带*号的参数,这里的星号表示数量及类型可变的参数.如:<br>
+<strong>def test_symbol(*var);var.each do |v|;puts v;end;end</strong><br>
+test_symbol("hello") #=>hello
+test_symbol("hello","world") #=>hello world
+test_symbol("hello","world",[1,"2"]) #=> hello world 1 2<br><br>
+星号还有其他的用法,如:<br>
+[1,2,3]*3 #=> [1, 2, 3, 1, 2, 3, 1, 2, 3]
+[1,2,3]*":" #=> "1:2:3"
+...
+</p>
+

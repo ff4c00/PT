@@ -1,0 +1,4 @@
+<!-- 2017年11月01日19:31:13 --> 
+<h3>find_by用法</h3>
+<p>find_by用于根据表中某个字段的具体值查找数据,如:<br>users表中有一个login_name字段.如果要查询user表中login_name值为xd_admin的用户,有3中等价操作:<br>1.User.where(login_name: "xd_admin")<br>2.User.find_by(login_name: "xd_admin")<br>3.User.find_by_login_name("xd_admin")<br>""强制读取数据库"=>"如果关联的对象之前已经取回，会返回缓存版本。如果不想使用缓存版本（强制读取数据库）在父对象上调用 #reload 方法。<br>@author = @book.reload.author<br>当对象新建或更新后需要重新读取</p> 
+
