@@ -1,4 +1,16 @@
 <!-- 2017年11月01日19:30:37 --> 
 <h3>||符号的作用</h3>
-<p>逻辑或运算符的作用是:<br> 变量 = 条件一 || 条件二 <br>如果条件一为false,则将条件二的值赋给变量.实际运用:<br>商品(product)关联详情表(info).可以通过product.info查看或修改详情,但如果product为新建商品则需要使用build_info来创建,所以当修改info信息时,代码如下:<br>info = product.info || product.build_info</p> 
+<p>逻辑或运算符的作用是:<br> 
+变量 = 条件一 || 条件二 <br>如果条件一为false,则将条件二的值赋给变量.实际运用:<br>
+商品(product)关联详情表(info).可以通过product.info查看或修改详情,但如果product为新建商品则需要使用build_info来创建,所以当修改info信息时,代码如下:<br>
+info = product.info || product.build_info
+</p> 
+
+<h3>
+to_f以及to_i避免异常<br>
+<span class="gray">2017年12月01日22:40:37</span>
+</h3>
+<p>
+在order.items.map{|i|i.price.to_f > plan.try(:old_price).to_f}.include?(true)<br>eval(order.items.map{|i|i.num}.join('+')) > plan.try(:old_num).to_i<br>在这里不仅可以保持数据类型的一致,更为重要的是如果参数值为nil如:plan.try(:old_num)可以将其转换为0以及0.0,可以避免报错.
+</p> 
 

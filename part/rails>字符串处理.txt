@@ -10,3 +10,11 @@ camelize方法可以将字串转为驼峰式的字串,如:<br>pry(main)> emall_
 调用 constantize 方法，将得到真正的类对象,如:<br>pry(main)> emall_code = "staples";emall_code.camelize.constantize #=> Staple<br>pry(main)> emall_code = "staples";emall_code.camelize.constantize.class #=> Module
 </p> 
 
+<h3>
+将带有分隔符的格式字符串转化为数组<br>
+<span class="gray">2017年11月14日14:11:48</span>
+</h3>
+<p>
+案例:在catalog表中有一个way_ids字段用于记录上级品目的id.如:"102-226-256",<br>可以通过split()方法来将字符串转化为数组:"102-226-256".split("-")
+</p> 
+
