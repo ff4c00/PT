@@ -1,0 +1,8 @@
+<h3>
+最大搜索条数配置<br>
+<span class="gray">2018年03月14日16:00:45</span>
+</h3>
+<p>
+搜索页点击末页有时会因搜索结果条数过多rails报:<br>[500] {"error":{"root_cause":[{"type":"query_phase_execution_exception","reason":"Result window is too large, from + size must be less than or equal to: [10000] but was [43470]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter."}],"type":"search_phase_execution_exception","reason":"all shards failed","phase":"query","grouped":true,"failed_shards":[{"shard":0,"index":"products_development_20180301161310896","node":"8gXHza42QbqOl3MZ2JBJzA","reason":{"type":"query_phase_execution_exception","reason":"Result window is too large, from + size must be less than or equal to: [10000] but was [43470]. See the scroll api for a more efficient way to request large data sets. This limit can be set by changing the [index.max_result_window] index level parameter."}}]},"status":500}<br>解决措施:<br>curl -XPUT http://127.0.0.1:9200/products_production(索引名,来自报错信息中的:"index":"products_production_20180226135854110",后面的日期可以去掉)/_settings -d '{ "index" : { "max_result_window" : 100000000}}<br>没有返回值即为设置成功.
+</p> 
+

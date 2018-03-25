@@ -1,0 +1,6 @@
+<!-- 2017年11月08日21:24:37 --> 
+<h3>组成模块</h3>
+<p>
+devise由10个模块组成:<br>1.Database Authenticatable(database_authenticatable)加密并储存密码于资料用以验证使用者身份<br>2.Registerable(registerable)处理注册流程包含帐号本身的编辑与删除<br>3.Recoverable(recoverable)重设密码与寄送Reset信件<br>4.Rememberable(rememberable)管理Token的产生与清除，这些资讯会被存在使用端的cookie<br>5.Trackable(trackable)追踪纪录登入的次数，时间与IP<br>6.Validatable(validatable)提供信箱和密码的验证机制。 此部分并没有强制使用且可以根据不同的情况客制，您可以自行定义您的验证机制<br>7.Timeoutable(timeoutable)用于设定session的存活时间<br><hr><br>devise还提供了一些helper:<br>current_model_name:获取当前使用者<br>model_name_signed_in?:判断是否登录<br>model_name_session:存取session<br>model_name是指将devise加入的模型名称,详细的解释可以产看<a herf="https://andyyou.github.io/2015/04/04/devise/">这里</a>
+</p> 
+

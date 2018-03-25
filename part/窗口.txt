@@ -1,0 +1,8 @@
+<h3>
+新窗口打开链接<br>
+<span class="gray">2018年01月29日18:05:13</span>
+</h3>
+<p>
+window.open(link,"_blank");
+</p> 
+

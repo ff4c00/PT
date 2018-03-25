@@ -1,0 +1,27 @@
+<h3>
+destroy操作<br>
+<span class="gray">2018年03月22日22:53:21</span>
+</h3>
+<p>
+使用generate命令创建的命令可以使用destroy命令进行撤销,如:<br>
+rails generate controller controller_name anction_one anction_two<br>
+rails destroy controller controller_name anction_one anction_two<br>
+上述两个命令是相互抵消的.<br>
+<??>如果destroy的时候少写anction_two会怎样?</??><br>
+经过尝试我发现少写anction _two也会将该controller相关文件全部删除而不仅仅是删除控制器中关于anction_one的部分.<br>
+脚手架生成的文件虽然得到了删除,但是生成的路由依然存在.
+</p> 
+
+<h3>
+rollback操作<br>
+<span class="gray">2018年03月22日22:53:21</span>
+</h3>
+<p>
+通过migrate命令执行迁移后使用rollback命令将撤销前一个迁移操作,如:<br>
+rails db:migrate<br>
+rails db:rollback<br>
+两者也会相互抵消.如果想要回滚到其他版本,可以使用:<br>
+rails db:migrate VERSION=num<br>
+数据库将回到数字num相应的版本,版本数字是按照迁移执行顺序排列的.!!这里少具体的操作图片!
+</p> 
+

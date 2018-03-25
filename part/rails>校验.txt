@@ -1,0 +1,8 @@
+<h3>
+唯一性校验<br>
+<span class="gray">2017年11月29日18:12:01</span>
+</h3>
+<p>
+validates_uniqueness_of用于做唯一性校验简单用法:<br>validates_uniqueness_of(:字段,:message=>"不唯一")
+</p> 
+

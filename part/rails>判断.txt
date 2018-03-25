@@ -1,0 +1,16 @@
+<h3>
+判断数据集合类型为数组或哈希<br>
+<span class="gray">2017年11月16日11:07:20</span>
+</h3>
+<p>
+is_a?()方法用于判断集合类型,返回true或false.<br>判度@product.img_urls是否为数组:@product.img_urls.is_a?(Array)<br>判断params是否为哈希:params.is_a?(Hash)
+</p> 
+
+<h3>
+非非判断<br>
+<span class="gray">2017年11月17日16:43:55</span>
+</h3>
+<p>
+非非(!!)用于判断值是否为空(nil).如:<br>a = nil;!!a #=>false<br>b = "";!!b #=> ture <br>
+</p> 
+

@@ -1,0 +1,6 @@
+<!-- 2017年11月13日11:28:19 --> 
+<h3>错误提示中文化</h3>
+<p>
+例如:<br> 操作失败！ translation missing: zh-CN.activerecord.errors.models.catalog.attributes.base.restrict_dependent_destroy.many<br>要将zh-CN.activerecord.errors.models.catalog.attributes.base.restrict_dependent_destroy.many改为中文提示的话首先要找到中zh-CN.yml文件,将每一个点"."替换为一个回车两个空格.如图:<img></img>
+</p> 
+

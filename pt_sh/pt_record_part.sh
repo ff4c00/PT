@@ -1,13 +1,13 @@
 echo -e "请输入片段关键字:";read -e key;
-echo "`cd part/;ls | grep "${key}";`";
+echo "`cd ${pt_file_path}/;ls | grep "${key}";`";
 echo -n "请输入片段的主题:";read -e title;
 
 # 判断文件是否存在.不存在则新建
-if [ ! -f "part/${title}.txt" ]; then
-  touch part/${title}.txt;
+if [ ! -f "${pt_file_path}/${key}_${title}.txt" ]; then
+  touch ${pt_file_path}/${key}_${title}.txt;
 fi
 
-pt_file_path=part/${title}.txt;
+pt_file_path=${pt_file_path}/${key}_${title}.txt;
 
 echo "请输入各片段名称,以空格分隔";read -a outlines;
 

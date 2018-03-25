@@ -1,0 +1,36 @@
+<h3>
+倒序排序<br>
+<span class="gray">2017年11月14日16:04:43</span>
+</h3>
+<p>
+reverse方法用于将当前数组倒序重新排序
+</p> 
+
+<h3>
+过滤空(nil)数据<br>
+<span class="gray">2017年11月16日16:37:57</span>
+</h3>
+<p>
+compact方法用于返回过滤数组中的空数据后的副本.如:<br>a = [1,2,nil]<br>a.compact #=> [1,2]<br>
+compact!方法直接从数组中移除nil元素,而不是返回副本,如果没有变化则返回nil.
+</p> 
+
+
+<h3>
+通过下标删除数组元素<br>
+<span class="gray">2017年11月16日16:55:56</span>
+</h3>
+<p>
+catalog中有一个way_ids字段用于存储父级品目的id,我遇到过一种情况是对品目的限额(限额:用户下单时对品目下产品的总额进行限制)进行校验,子品目的限额要小于其父级品目的限额.当时我是这么做的:<br>catalog_ids = self.way_ids.split("-")# self.way_ids => "679-1923-332""父级id-父级id-自己id"<br>之前获取父级id我是这么做的:parent_catalog_ids = catalog_ids[0...(catalog_ids.size-1)]<br>使用delete_at方法可以这样做:<br>catalog_ids.delete_at(-1)<br>现在catalog_ids的值就是父级品目的id了. 
+</p> 
+
+
+
+<h3>
+将数组分组为固定长度的数组<br>
+<span class="gray">2017年12月28日17:30:55</span>
+</h3>
+<p>
+in_groups_of用于将数组分为特定长度的数组,如:<br>(1..8).to_a.in_groups_of(3) #=>[[1, 2, 3], [4, 5, 6], [7, 8, nil]]<br>默认最后会补齐.如果不需要补缺可以加条件:<br>(1..8).to_a.in_groups_of(3,false) #=>[[1, 2, 3], [4, 5, 6], [7, 8]]
+</p> 
+

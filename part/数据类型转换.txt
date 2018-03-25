@@ -1,0 +1,8 @@
+<h3>
+数字/字符串转化为BigDecimal类型<br>
+<span class="gray">2018年02月27日15:07:30</span>
+</h3>
+<p>
+如查询数据库中某个BigDecimal类型字段的值为0的情况,首先需要将字符串/数字转化为BigDecimal类型,如:<br/>BigDecimal.new(0.to_s) #=> #<BigDecimal:a66bc78,'0.0',9(18)> <br>BigDecimal.new(0) #=> #<BigDecimal:a5db560,'0.0',9(27)><br>Product.where(emall_code: 'jd',snatch_price: BigDecimal.new(0.to_s)).size
+</p> 
+

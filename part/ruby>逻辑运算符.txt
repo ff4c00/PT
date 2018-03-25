@@ -1,0 +1,9 @@
+<h3>
+安全运算符<br>
+<span class="gray">2018年03月10日15:10:49</span>
+</h3>
+<p>
+a = nil;a = b.first if b; -> a = b && b.first; -> a = b&.first;<br>
+表达式的从左到右执行,最后一个表达式的值是整体逻辑表达式的值.所以当b和b.first的值都不为nil或false时返回b.first的值,否则返回最后运行的那个表达是也就是b的值nil或者是false.
+</p> 
+

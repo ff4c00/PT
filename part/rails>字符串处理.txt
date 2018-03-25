@@ -18,3 +18,11 @@ camelize方法可以将字串转为驼峰式的字串,如:<br>pry(main)> emall_
 案例:在catalog表中有一个way_ids字段用于记录上级品目的id.如:"102-226-256",<br>可以通过split()方法来将字符串转化为数组:"102-226-256".split("-")
 </p> 
 
+<h3>
+字符串存储数组<br>
+<span class="gray">2017年12月11日14:41:16</span>
+</h3>
+<p>
+category_id(string)字段存储数组时去除中括号,这样在使用in语句查询时可以直接split将字符串转换为数组.简单实现如:<br>a="[1,2,3,4]"<br>a=a[1..-2] #=> "1,2,3,4"<br>代码中的实际应用:<br>Catalog.where(code: Catalog.find(params[:plan][:category_id]).code).map(&:id).to_s[1..-2]
+</p> 
+

@@ -1,0 +1,6 @@
+<!-- 2017年11月12日11:44:51 --> 
+<h3>纯数字或英文换行问题</h3>
+<p>
+如果表格中显示的内容不是中文时，而是纯数字或英文时，默认是不换行的，而汉字是换自动换行的.<br>可以在table中加入style:<br><table style="word-break:break-all; word-wrap:break-all;"><br>来解决此问题.
+</p> 
+
