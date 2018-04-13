@@ -1,0 +1,15 @@
+<h3>
+散列用法<br>
+<span class="gray">2018年04月08日15:41:56</span>
+</h3>
+<p>
+h_value = Article.where(title: (h_key = [article_name,article_name,article_namearticle_name...])).ids;h_data = Hash[h_key.zip h_value]
+</p> 
+
+<h3>
+链接限制名称长度<br>
+<span class="gray">2018年04月08日15:51:17</span>
+</h3>
+<p>
+<%= link_to truncate(need_show_name, :length => 10),xxxx_path %>
+</p>
